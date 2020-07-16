@@ -1,11 +1,12 @@
 import React from "react";
 
-function PageHome() {
+import ViewBase from "@/views/base";
+const PageHome: React.FC = (props) => {
   return (
-    <div className="p-home">
+    <ViewBase className="p-home">
       page home
-    </div>
+    </ViewBase>
   );
-}
+};
 
 export default PageHome;
