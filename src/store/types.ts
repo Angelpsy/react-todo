@@ -1,8 +1,13 @@
+import {Action} from "redux";
+import {APP_CHANGE_STATUS} from "./actions";
+import {State as ItemsState} from "./items/types";
+
 /**
  * Общий State
  */
 export interface RootState {
   app: AppState;
+  items: ItemsState,
 }
 
 export type GetRootState = () => RootState;
@@ -26,3 +31,9 @@ export enum Status {
    */
   DESTROY = "destroy",
 }
+
+export interface ChangeStatusAction extends Action<typeof APP_CHANGE_STATUS> {
+  payload: Status;
+}
+
+export type Actions = ChangeStatusAction;
